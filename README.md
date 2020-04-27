@@ -1,4 +1,4 @@
-# dialog_context
+[![Pub Version](https://img.shields.io/pub/v/dialog_context?color=%2302569B&label=pub&logo=flutter)](https://pub.dev/packages/mobx_widget) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 ### Show Dialog, BottomSheet, ModalBottomSheet and SnackBar without BuildContext.
 
@@ -46,4 +46,10 @@ MaterialApp(
   ),
   home: MyHomePage(title: 'Dialogs without BuildContext'),
 );
+```
+
+#### Add dependency
+```yaml
+  dependencies:
+    dialog_context: ^0.1.0
 ```
