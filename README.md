@@ -1,4 +1,4 @@
-[![Pub Version](https://img.shields.io/pub/v/dialog_context?color=%2302569B&label=pub&logo=flutter)](https://pub.dev/packages/mobx_widget) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+[![Pub Version](https://img.shields.io/pub/v/dialog_context?color=%2302569B&label=pub&logo=flutter)](https://pub.dev/packages/dialog_context) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 ### Show Dialog, BottomSheet, ModalBottomSheet and SnackBar without BuildContext.
 
