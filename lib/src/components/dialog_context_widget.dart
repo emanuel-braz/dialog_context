@@ -20,15 +20,14 @@ class _DialogContextWidgetState extends State<DialogContextWidget> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-        body: Builder(
-          builder: (scaffoldContext) {
-            DialogContext().scaffoldContext = scaffoldContext;
-            return widget.child;
-          },
-        ),
-      );
+      body: Builder(
+        builder: (scaffoldContext) {
+          DialogContext().scaffoldContext = scaffoldContext;
+          return widget.child;
+        },
+      ),
+    );
   }
 
   Future<T> _showDialog<T>(

@@ -8,9 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (context, widget) => Navigator( // important: Use builder to initiate
+      builder: (context, widget) => Navigator(
+        // important: Use builder to initiate
         onGenerateRoute: (settings) => MaterialPageRoute(
-          builder: (context) => DialogContextWidget( // important: Use the DialogContextWidget as root widget
+          builder: (context) => DialogContextWidget(
+            // important: Use the DialogContextWidget as root widget
             child: widget,
           ),
         ),
