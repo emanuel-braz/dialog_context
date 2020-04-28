@@ -23,7 +23,7 @@ class _DialogContextWidgetState extends State<DialogContextWidget> {
     return Scaffold(
       body: Builder(
         builder: (scaffoldContext) {
-          DialogContext().scaffoldContext = scaffoldContext;
+          DialogContext().context = scaffoldContext;
           return widget.child;
         },
       ),
@@ -43,7 +43,7 @@ class _DialogContextWidgetState extends State<DialogContextWidget> {
 
   ScaffoldFeatureController<SnackBar, SnackBarClosedReason> _showSnackBar(
           SnackBar snackBar) =>
-      Scaffold.of(DialogContext().scaffoldContext).showSnackBar(snackBar);
+      Scaffold.of(DialogContext().context).showSnackBar(snackBar);
 
   Future<T> _showModalBottomSheet<T>(
       {Widget Function(BuildContext) builder,
@@ -74,7 +74,7 @@ class _DialogContextWidgetState extends State<DialogContextWidget> {
       ShapeBorder shape,
       Clip clipBehavior}) {
     return showBottomSheet<T>(
-        context: DialogContext().scaffoldContext,
+        context: DialogContext().context,
         builder: builder,
         backgroundColor: backgroundColor,
         elevation: elevation,

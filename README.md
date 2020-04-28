@@ -34,16 +34,10 @@ DialogContext().showBottomSheet(
 );
 ```
 
-## Important: Use the builder of MaterialApp
+## Important: Use the DialogContext().builder in MaterialApp
 ```dart
 MaterialApp(
-  builder: (context, widget) => Navigator( // important: Use builder to initiate routes
-    onGenerateRoute: (settings) => MaterialPageRoute(
-      builder: (context) => DialogContextWidget( // important: Use the DialogContextWidget as root widget
-        child: widget,
-      ),
-    ),
-  ),
+  builder: DialogContext().builder, /// important: Use [DialogContext().builder] builder here!
   home: MyHomePage(title: 'Dialogs without BuildContext'),
 );
 ```
@@ -51,5 +45,5 @@ MaterialApp(
 #### Add dependency
 ```yaml
   dependencies:
-    dialog_context: ^0.1.0
+    dialog_context: ^0.1.1
 ```

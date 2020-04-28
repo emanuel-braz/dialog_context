@@ -8,15 +8,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (context, widget) => Navigator(
-        // important: Use builder to initiate
-        onGenerateRoute: (settings) => MaterialPageRoute(
-          builder: (context) => DialogContextWidget(
-            // important: Use the DialogContextWidget as root widget
-            child: widget,
-          ),
-        ),
-      ),
+      builder: DialogContext().builder,
+
+      /// important: Use [DialogContext().builder] builder
       title: 'Dialogs without BuildContext',
       theme: ThemeData(
         primarySwatch: Colors.blue,

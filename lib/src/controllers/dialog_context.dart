@@ -1,3 +1,4 @@
+import 'package:dialog_context/src/components/dialog_context_widget.dart';
 import 'package:flutter/material.dart';
 
 typedef Future<T> DialogFuture<T>(
@@ -24,7 +25,7 @@ typedef PersistentBottomSheetController<T> DialogBottomSheet<T>(
     Clip clipBehavior});
 
 class DialogContext {
-  BuildContext scaffoldContext;
+  BuildContext context;
 
   DialogFuture _showDialog;
   DialogModalSheet _showModalBottomSheet;
@@ -34,6 +35,16 @@ class DialogContext {
   DialogContext._private();
   static DialogContext _instance = DialogContext._private();
   factory DialogContext() => _instance;
+
+  Widget builder(BuildContext context, Widget widget) {
+    return Navigator(
+      onGenerateRoute: (settings) => MaterialPageRoute(
+        builder: (context) => DialogContextWidget(
+          child: widget,
+        ),
+      ),
+    );
+  }
 
   void registerDialogCallback(
       {DialogFuture showDialog,
@@ -58,7 +69,7 @@ class DialogContext {
     );
   }
 
-  void dismissSnackBar() => Scaffold.of(scaffoldContext).hideCurrentSnackBar();
+  void dismissSnackBar() => Scaffold.of(context).hideCurrentSnackBar();
   ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showSnackBar(
       {@required SnackBar snackBar}) {
     assert(snackBar != null);

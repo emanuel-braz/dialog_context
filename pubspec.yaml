@@ -1,6 +1,6 @@
 name: dialog_context
 description: Show Dialog, BottomSheet, ModalBottomSheet and SnackBar without BuildContext.
-version: 0.1.0
+version: 0.1.1
 author: Emanuel Braz - fastencoding@gmail.com
 homepage: https://github.com/emanuel-braz/dialog_context.git
 
