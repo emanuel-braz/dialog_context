@@ -1,6 +1,10 @@
 [![Pub Version](https://img.shields.io/pub/v/dialog_context?color=%2302569B&label=pub&logo=flutter)](https://pub.dev/packages/dialog_context) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-### Show Dialog, BottomSheet, ModalBottomSheet and SnackBar without BuildContext.
+### Show Dialog, BottomSheet, ModalBottomSheet and SnackBar with no need BuildContext.
+To be discontinued, use the OneContext package: [one_context](https://pub.dev/packages/one_context)
+
+
+## https://pub.dev/packages/one_context
 
 ```dart
 // example snackBar
